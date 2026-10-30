@@ -27,6 +27,7 @@ h2{font-size:clamp(2.1rem,5vw,3.4rem)}
 h3{font-size:1.75rem}
 p{max-width:58ch}
 :focus-visible{outline:2px solid var(--nogueira);outline-offset:3px}
+main:focus{outline:none}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
 section{padding:clamp(4rem,10vw,8rem) 0}
 .skip{position:absolute;left:-999px;top:0;background:var(--grafite);color:#fff;padding:.7rem 1rem;z-index:100}
@@ -196,7 +197,7 @@ footer h3{font:500 1rem var(--sans);margin-bottom:.8rem}
   </div>
 </header>
 
-<main id="conteudo">
+<main id="conteudo" tabindex="-1">
 <section class="hero" id="inicio">
   <div class="hero-txt">
     <h1 class="in">Há muita beleza na tua <span class="nb">singularidade!</span></h1>
@@ -440,7 +441,7 @@ const CONFIG = {
       if (heroFig && heroImg) parallax(heroFig, heroImg, 1.1);
     };
     window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(atualizar); } }, { passive: true });
-    window.addEventListener("resize", atualizar);
+    window.addEventListener("resize", function () { if (!tick) { tick = true; requestAnimationFrame(atualizar); } });
     atualizar();
   }
 
@@ -451,11 +452,25 @@ const CONFIG = {
   function onScroll() { header.classList.toggle("compact", window.scrollY > 40); }
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
+  var mobile = window.matchMedia("(max-width:900px)");
   function setMenu(open) {
     nav.classList.toggle("open", open);
     btn.setAttribute("aria-expanded", String(open));
     btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    document.body.style.overflow = open && mobile.matches ? "hidden" : "";
+    if (open && mobile.matches) {
+      var first = nav.querySelector("a");
+      if (first) setTimeout(function () { first.focus(); }, 50);
+    }
   }
+  /* Mantém o foco do teclado dentro do menu aberto (botão + links) */
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Tab" || !nav.classList.contains("open") || !mobile.matches) return;
+    var itens = [btn].concat(Array.prototype.slice.call(nav.querySelectorAll("a")));
+    var i = itens.indexOf(document.activeElement);
+    if (e.shiftKey && i <= 0) { e.preventDefault(); itens[itens.length - 1].focus(); }
+    else if (!e.shiftKey && i === itens.length - 1) { e.preventDefault(); itens[0].focus(); }
+  });
   btn.addEventListener("click", function () { setMenu(!nav.classList.contains("open")); });
   nav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { setMenu(false); }); });
   document.addEventListener("click", function (e) {
@@ -464,7 +479,9 @@ const CONFIG = {
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && nav.classList.contains("open")) { setMenu(false); btn.focus(); }
   });
-  window.matchMedia("(min-width:901px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
+  var desktop = window.matchMedia("(min-width:901px)");
+  var aoMudar = function (m) { if (m.matches) setMenu(false); };
+  if (desktop.addEventListener) desktop.addEventListener("change", aoMudar); else if (desktop.addListener) desktop.addListener(aoMudar);
 })();
 </script>
 </body>
