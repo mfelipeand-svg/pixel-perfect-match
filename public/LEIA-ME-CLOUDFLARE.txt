@@ -1,0 +1,22 @@
+INSTITUTO PERFORMANCE — SITE PARA CLOUDFLARE PAGES
+====================================================
+
+Este pacote contém a versão final aprovada do site, em um único arquivo:
+index.html (com textos, fotos e estilos embutidos).
+
+COMO PUBLICAR NO CLOUDFLARE PAGES
+---------------------------------
+1) Acesse o painel do Cloudflare e vá em "Workers & Pages".
+2) Clique em "Create" e escolha "Pages" e depois "Upload assets" (Direct Upload).
+3) Envie o arquivo "instituto-performance-cloudflare.zip" (não é preciso descompactar)
+   OU extraia o ZIP e arraste a pasta com o index.html.
+4) Dê um nome ao projeto e clique em "Deploy".
+
+Depois do primeiro envio, para atualizar o site, use "Create new deployment"
+e envie o novo ZIP.
+
+OBSERVAÇÕES
+-----------
+- O arquivo index.html funciona sozinho: as fotos estão dentro dele.
+- As fontes são carregadas pelo Google Fonts pela internet (padrão de sites).
+- Nenhum dado sensível, credencial ou chave está incluído neste pacote.
