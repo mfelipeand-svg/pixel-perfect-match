@@ -8,6 +8,11 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#F6F1E9">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Instituto Performance | Dermatologia em Salvador">
+<meta property="og:description" content="Dermatologia clínica, dermatologia estética e tricologia no Caminho das Árvores, Salvador.">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23F6F1E9%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 fill=%27none%27 stroke=%27%231E1B19%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2743%27 font-family=%27Georgia,serif%27 font-size=%2730%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%231E1B19%27%3EIP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,7 +100,6 @@ nav .btn{padding:.55rem 1.2rem;min-height:44px;color:var(--marfim)}
 .link{font-weight:500;text-underline-offset:6px}
 .equipe .intro{margin-top:1rem}
 .nb{white-space:nowrap}
-.nota{font-size:.88rem;color:var(--nogueira);margin-top:2rem}
 
 /* experiência */
 .exp .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:center}
@@ -114,8 +118,6 @@ nav .btn{padding:.55rem 1.2rem;min-height:44px;color:var(--marfim)}
 .prof:nth-child(2){margin-top:clamp(0rem,5vw,4rem)}
 .foto-prof{margin:0;aspect-ratio:4/5;width:100%;overflow:hidden;background:rgba(246,241,233,.07);border:1px solid rgba(246,241,233,.3);position:relative}
 .foto-prof img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
-.foto-vazia{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:1.5rem;color:rgba(246,241,233,.75);font-size:.85rem;letter-spacing:.04em}
-.foto-vazia .mono{background:transparent;border-color:rgba(246,241,233,.6);color:var(--marfim)}
 .prof-info{display:flex;flex-direction:column;gap:1.1rem}
 .prof h3{font-size:clamp(1.8rem,3vw,2.2rem)}
 .prof .area{font:500 .8rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--champagne);margin-top:-.4rem}
@@ -126,7 +128,6 @@ nav .btn{padding:.55rem 1.2rem;min-height:44px;color:var(--marfim)}
 .pessoas-equipe{max-width:920px;margin-top:3rem;padding:1.8rem 2rem;border:1px solid rgba(246,241,233,.3);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem 2rem}
 .pessoas-equipe h3{font-size:1.6rem;margin-bottom:.3rem}
 .pessoas-equipe p{font-size:.98rem;opacity:.8}
-.equipe .nota{color:var(--champagne)}
 
 /* contato */
 .contato .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
@@ -144,7 +145,7 @@ footer{background:var(--grafite);color:var(--marfim);padding:4rem 0 calc(2rem + 
 footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem}
 footer .mono{background:transparent;border-color:var(--marfim)}
 footer ul{list-style:none;padding:0;display:grid;gap:.5rem}
-footer h3{font:500 1rem var(--sans);margin-bottom:.8rem}
+footer h2{font:500 1rem var(--sans);margin-bottom:.8rem;letter-spacing:0}
 .legal{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(246,241,233,.2);font-size:.85rem;opacity:.75;max-width:none}
 
 @media (max-width:900px){
@@ -341,14 +342,14 @@ footer h3{font:500 1rem var(--sans);margin-bottom:.8rem}
       <p>Edifício Boulevard Side Empresarial, Rua Ewerton Visco, 290, salas 308–309, Caminho das Árvores, Salvador, BA.</p>
     </div>
     <div>
-      <h3>Navegue</h3>
+      <h2>Navegue</h2>
       <ul>
         <li><a href="#instituto">O Instituto</a></li><li><a href="#cuidados">Cuidados</a></li>
         <li><a href="#experiencia">Experiência</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#contato">Contato</a></li>
       </ul>
     </div>
     <div>
-      <h3>Canais oficiais</h3>
+      <h2>Canais oficiais</h2>
       <ul>
         <li><a href="https://www.instagram.com/performance.instituto/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         <li><a href="https://linktr.ee/ipperformance" target="_blank" rel="noopener noreferrer">Linktree</a></li>
@@ -356,7 +357,7 @@ footer h3{font:500 1rem var(--sans);margin-bottom:.8rem}
       </ul>
     </div>
   </div>
-  <div class="wrap"><p class="legal">Demonstração comercial preparada pela NotaNFC+. Conteúdos provisórios e informações legais (CNPJ, registros profissionais) a serem fornecidos pela clínica.</p></div>
+  <div class="wrap"><p class="legal">© Instituto Performance · Salvador, Bahia</p></div>
 </footer>
 
 <script>
@@ -368,9 +369,6 @@ const CONFIG = {
     ana:     { numero: "5571999632523", texto: "Gostaria de agendar uma avaliação com a Dra. Ana Helena Ramos" },
     equipe:  { numero: "5571999632523", texto: "Gostaria de agendar uma consulta no Instituto Performance" }
   },
-  /* Fotos das doutoras: informe o caminho/URL do arquivo entregue pela clínica (ex.: "fotos/isabela.jpg").
-     Vazio = mostra o espaço reservado. */
-  fotos: { isabela: "", ana: "" },
   endereco: "Rua Ewerton Visco, 290, Caminho das Árvores, Salvador, Bahia"
 };
 
@@ -390,15 +388,6 @@ const CONFIG = {
   } catch (e) { console.error("Erro ao configurar links:", e); }
 
 
-  /* Fotos das doutoras (somente se informadas em CONFIG.fotos) */
-  document.querySelectorAll(".foto-prof[data-foto]").forEach(function (fig) {
-    var src = CONFIG.fotos && CONFIG.fotos[fig.dataset.foto];
-    if (!src) return;
-    var im = new Image();
-    im.alt = fig.dataset.nome; im.decoding = "async";
-    im.onload = function () { var v = fig.querySelector(".foto-vazia"); if (v) v.remove(); fig.appendChild(im); };
-    im.src = src;
-  });
 
   /* Animações de imagem: respeitam prefers-reduced-motion e nunca deixam a foto escondida */
   document.documentElement.classList.add("js");
