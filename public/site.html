@@ -1,90 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dra. Ana Helena | Dermatologia Clínica e Estética em Salvador</title>
-<meta name="description" content="Dra. Ana Helena, médica CRM-BA 43.424, pós-graduada em Dermatologia Clínica e Estética. Estética avançada, rejuvenescimento e tricologia em Salvador.">
-<meta name="theme-color" content="#f7f1ea">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Dra. Ana Helena | Dermatologia Clínica e Estética">
-<meta property="og:description" content="Uma estética que respeita a individualidade. Ciência, tecnologia e sensibilidade para valorizar a beleza natural.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--cream:#f7f1ea;--paper:#fffaf5;--sand:#e9ded1;--brown:#68452e;--dark:#2a211b;--gold:#bd9560;--muted:#77695d;--serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--pad:clamp(22px,5vw,76px);--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--dark);font:16px/1.7 var(--sans)}img{display:block;width:100%;height:100%;object-fit:cover}a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(100% - 2*var(--pad),var(--max));margin:auto}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brown);font-weight:600}.serif{font-family:var(--serif);font-weight:400;line-height:.98;letter-spacing:-.025em}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(54px,7vw,96px);margin:22px 0}h2{font-size:clamp(42px,5vw,68px);margin:12px 0 22px}h3{font-size:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:40px;text-decoration:none;background:var(--brown);color:white;font-size:14px;font-weight:600;transition:.2s}.btn:hover{background:#432d20;transform:translateY(-2px)}.btn.outline{background:transparent;color:var(--brown);border:1px solid var(--brown)}header{height:82px;position:sticky;top:0;z-index:20;background:rgba(247,241,234,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(104,69,46,.12)}.bar{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.monogram{font:italic 42px var(--serif);color:var(--brown);border-right:1px solid var(--gold);padding-right:12px}.brand-name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1.35}.nav{display:flex;align-items:center;gap:28px}.nav a:not(.btn){text-decoration:none;font-size:13px}.nav a:not(.btn):hover{color:var(--gold)}.menu{display:none;border:0;background:none;font-size:26px;color:var(--brown)}
-.hero{min-height:690px;display:grid;grid-template-columns:.92fr 1.08fr;background:var(--paper);overflow:hidden}.hero-copy{padding:clamp(55px,8vw,110px) 3vw clamp(55px,8vw,100px) max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)))}.hero-copy>p{max-width:470px;color:#51453b;font-size:16px}.hero-photo{min-height:650px;position:relative;overflow:hidden;background:var(--sand)}.hero-photo img{object-position:50% 25%}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,33,27,.1),transparent 45%)}.hero-sign{position:absolute;right:7%;bottom:8%;color:white;text-align:right;text-shadow:0 2px 18px #302015}.hero-sign strong{display:block;font:italic 42px var(--serif)}.hero-sign span{font-size:12px;letter-spacing:.12em}
-.intro{padding:110px 0}.intro-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:9%;align-items:center}.portrait{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--sand);max-height:650px}.intro-copy p{color:#51483f}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:35px;padding-top:25px;border-top:1px solid #d8cabc}.credential b{display:block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--brown);margin-bottom:7px}.credential span{font-size:14px}
-.philosophy{background:var(--brown);color:var(--paper);padding:95px 0;position:relative;overflow:hidden}.philosophy-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:7%;align-items:center}.philosophy blockquote{font:italic clamp(34px,4vw,54px)/1.05 var(--serif);margin:18px 0 22px;max-width:680px}.philosophy p{max-width:560px;color:#f0e4d8}.philosophy-photo{aspect-ratio:5/4;max-height:450px;overflow:hidden}.philosophy .eyebrow{color:#e2c59f}
-.practice{padding:105px 0}.practice-head{text-align:center;max-width:750px;margin:0 auto 50px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(255,250,245,.7);border:1px solid #e6dacf;padding:30px 27px;min-height:230px}.card .num{font:italic 28px var(--serif);color:var(--gold)}.card h3{font:500 28px var(--serif);margin:15px 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}
-.gallery{padding:0 0 110px}.gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.gallery-grid figure{margin:0;aspect-ratio:4/5;overflow:hidden;background:var(--sand)}.gallery-grid figure:nth-child(2){transform:translateY(35px)}
-.attend{background:var(--sand);padding:85px 0}.attend-row{display:flex;justify-content:space-between;align-items:center;gap:30px}.attend p{margin:0;color:#55483c}.attend h2{margin-bottom:8px}
-footer{background:var(--dark);color:var(--paper);padding:50px 0 28px}.foot{display:flex;align-items:center;justify-content:space-between;gap:25px}.foot .brand-name{color:var(--paper)}.foot p{font-size:13px;color:#d3c5b8;margin:0}.legal{border-top:1px solid #57473b;margin-top:35px;padding-top:20px;font-size:11px;color:#b8a99b}
-@media(max-width:850px){.nav{display:none;position:absolute;top:81px;left:0;right:0;background:var(--paper);padding:25px var(--pad);flex-direction:column;align-items:stretch;border-bottom:1px solid #e6dacf}.nav.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:85px var(--pad) 45px}.hero-photo{min-height:590px;order:2}.intro-grid,.philosophy-grid{grid-template-columns:1fr;gap:35px}.portrait{max-height:580px}.cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid figure:nth-child(2){transform:none}.attend-row,.foot{align-items:flex-start;flex-direction:column}.attend .btn{width:100%}}
-@media(max-width:520px){.hero-photo{min-height:510px}.credentials{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;gap:9px}.gallery-grid figure{aspect-ratio:3/4}.brand-name{font-size:10px}.monogram{font-size:36px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dra. Ana Helena | Dermatologia Clínica e Estética em Salvador</title>
+  <meta name="description" content="Dra. Ana Helena, médica CRM-BA 43.424, pós-graduada em Dermatologia Clínica e Estética. Estética avançada, rejuvenescimento e tricologia em Salvador.">
+  <meta name="theme-color" content="#f7f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dra. Ana Helena | Dermatologia Clínica e Estética">
+  <meta property="og:description" content="Uma estética que respeita a individualidade. Ciência, tecnologia e sensibilidade para valorizar a beleza natural.">
+  <meta property="og:image" content="/assets/dra-ana-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-<header><div class="wrap bar">
-<a class="brand" href="#inicio" aria-label="Dra. Ana Helena, início"><span class="monogram">AH</span><span class="brand-name">Dra. Ana Helena<br>Dermatologia Clínica e Estética</span></a>
-<button class="menu" aria-label="Abrir navegação" aria-expanded="false">☰</button>
-<nav class="nav" aria-label="Navegação principal"><a href="#sobre">Sobre</a><a href="#atuacao">Atuação</a><a href="#filosofia">Filosofia</a><a href="#atendimento">Atendimento</a><a class="btn" href="#atendimento">Agende sua consulta ↗</a></nav>
-</div></header>
-<main>
-<section class="hero" id="inicio">
-<div class="hero-copy"><span class="eyebrow">Dermatologia clínica e estética</span>
-<h1 class="serif">Estética médica que valoriza a sua individualidade.</h1>
-<p>“Acredito em uma estética que respeita a individualidade. Aliamos ciência, tecnologia e sensibilidade para valorizar a beleza natural, com resultados elegantes e fiéis à essência de cada paciente.”</p>
-<a class="btn" href="#atendimento">Agende sua consulta <span>↗</span></a>
-</div>
-<div class="hero-photo"><img src="assets/ana-helena-hero.jpg" alt="Dra. Ana Helena em retrato profissional" fetchpriority="high"><div class="hero-sign"><strong>Dra. Ana Helena</strong><span>MÉDICA · CRM-BA 43.424</span></div></div>
-</section>
-<section class="intro" id="sobre"><div class="wrap intro-grid">
-<figure class="portrait"><img src="assets/ana-helena-sobre.jpg" alt="Dra. Ana Helena em seu consultório" loading="lazy"></figure>
-<div class="intro-copy"><span class="eyebrow">Sobre a Dra.</span><h2 class="serif">Dra. Ana Helena</h2>
-<p><strong>Médica · CRM-BA 43.424 · Pós-graduada em Dermatologia Clínica e Estética</strong></p>
-<p>Sócia-fundadora do Instituto Performance desde 2025, a Dra. Ana Helena desenvolve sua prática médica com uma visão que integra ciência, inovação e sensibilidade, reconhecendo a beleza como uma expressão singular de cada paciente.</p>
-<p>Sua filosofia de trabalho é fundamentada na prevenção, no rejuvenescimento e na longevidade da pele, associando conhecimento científico, tecnologias avançadas e tratamentos individualizados para valorizar a beleza natural, preservar a harmonia e respeitar a essência de cada pessoa.</p>
-<div class="credentials"><div class="credential"><b>Formação</b><span>Medicina e Pós-graduação em Dermatologia Clínica e Estética</span></div><div class="credential"><b>Atuação</b><span>Estética Avançada e Rejuvenescimento · Tricologia</span></div></div>
-</div></div></section>
-<section class="philosophy" id="filosofia"><div class="wrap philosophy-grid">
-<div><span class="eyebrow">Uma abordagem individual</span><blockquote>“A beleza deve ser valorizada, nunca padronizada.”</blockquote>
-<p>Minha abordagem parte de um princípio essencial: cada tratamento é cuidadosamente planejado para preservar a individualidade, promover o equilíbrio e proporcionar resultados naturais ao longo do tempo.</p></div>
-<figure class="philosophy-photo"><img src="assets/ana-helena-filosofia.jpg" alt="Dra. Ana Helena em retrato de perfil" loading="lazy"></figure>
-</div></section>
-<section class="practice" id="atuacao"><div class="wrap">
-<div class="practice-head"><span class="eyebrow">Ciência, cuidado e tecnologia</span><h2 class="serif">Tratamentos personalizados</h2><p>Uma atuação que considera as necessidades individuais, com atenção à saúde da pele, ao equilíbrio e à beleza natural.</p></div>
-<div class="cards">
-<article class="card"><span class="num">01</span><h3>Estética avançada e rejuvenescimento</h3><p>Tecnologias e tratamentos individualizados para valorizar a beleza natural, preservar a harmonia e promover resultados elegantes.</p></article>
-<article class="card"><span class="num">02</span><h3>Tricologia</h3><p>Atenção especializada à saúde dos cabelos e do couro cabeludo, com avaliação e cuidado individualizados.</p></article>
-<article class="card"><span class="num">03</span><h3>Prevenção e longevidade da pele</h3><p>Cuidados planejados para acompanhar a saúde da pele ao longo do tempo, respeitando sua individualidade.</p></article>
-</div></div></section>
-<section class="gallery" aria-label="Retratos profissionais"><div class="wrap gallery-grid">
-<figure><img src="assets/ana-helena-retrato-1.jpg" alt="Dra. Ana Helena em retrato profissional" loading="lazy"></figure>
-<figure><img src="assets/ana-helena-retrato-2.jpg" alt="Dra. Ana Helena em ambiente de atendimento" loading="lazy"></figure>
-<figure><img src="assets/ana-helena-retrato-3.jpg" alt="Dra. Ana Helena em retrato" loading="lazy"></figure>
-</div></section>
-<section class="attend" id="atendimento"><div class="wrap attend-row">
-<div><span class="eyebrow">Atendimento</span><h2 class="serif">Seu cuidado começa pela sua singularidade.</h2><p>Instituto Performance · Salvador — Bahia</p></div>
-<a class="btn" href="https://wa.me/5571999632523?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Ana%20Helena." target="_blank" rel="noopener noreferrer">Falar no WhatsApp ↗</a>
-</div></section>
-</main>
-<footer><div class="wrap"><div class="foot">
-<a class="brand" href="#inicio"><span class="monogram">AH</span><span class="brand-name">Dra. Ana Helena<br>Dermatologia Clínica e Estética</span></a>
-<p>Médica · CRM-BA 43.424<br>Instituto Performance · Salvador — Bahia</p>
-<a href="#inicio" class="btn outline">Voltar ao início ↑</a>
-</div><p class="legal">© <span id="year">2026</span> Dra. Ana Helena. Todos os direitos reservados.</p></div></footer>
-<script>
-(function(){
-const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Fechar navegação':'Abrir navegação');nav.classList.toggle('open',open);menu.textContent=open?'×':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir navegação');menu.textContent='☰';}));
-document.getElementById('year').textContent=new Date().getFullYear();
-})();
-</script>
-</body></html>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#inicio" aria-label="Dra. Ana Helena, início">
+        <span class="monogram" aria-hidden="true">AH</span>
+        <span class="brand-name">Dra. Ana Helena<br>Dermatologia Clínica e Estética</span>
+      </a>
+      <button class="menu" type="button" aria-label="Abrir navegação" aria-expanded="false" aria-controls="navegacao">☰</button>
+      <nav class="nav" id="navegacao" aria-label="Navegação principal">
+        <a href="#sobre">Sobre a Dra.</a>
+        <a href="#filosofia">Filosofia</a>
+        <a href="#atuacao">Atuação</a>
+        <a href="#espaco">Conheça o espaço</a>
+        <a href="#galeria">Retratos</a>
+        <a class="btn" href="#atendimento">Agende sua consulta ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">Dermatologia clínica e estética</span>
+        <h1 class="serif" id="hero-title">Ciência, precisão e sensibilidade para valorizar sua beleza.</h1>
+        <p>“Acredito em uma estética que respeita a individualidade. Aliamos ciência, tecnologia e sensibilidade para valorizar a beleza natural, com resultados elegantes e fiéis à essência de cada paciente.”</p>
+        <a class="btn" href="#atendimento">Agende sua consulta <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/dra-ana-01.jpg" alt="Dra. Ana Helena em retrato profissional" width="900" height="1350" fetchpriority="high" decoding="async">
+        <figcaption class="hero-sign">
+          <strong>Dra. Ana Helena</strong>
+          <span>MÉDICA · CRM-BA 43.424</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="intro section-pad" id="sobre" aria-labelledby="sobre-title">
+      <div class="wrap intro-grid">
+        <figure class="portrait">
+          <img src="assets/dra-ana-12.jpg" alt="Dra. Ana Helena em seu ambiente de trabalho" width="900" height="1350" loading="lazy" decoding="async">
+        </figure>
+        <div class="intro-copy">
+          <span class="eyebrow">Sobre a Dra.</span>
+          <h2 class="serif" id="sobre-title">Dra. Ana Helena</h2>
+          <p><strong>Médica · CRM-BA 43.424 · Pós-graduada em Dermatologia Clínica e Estética</strong></p>
+          <p>Sócia-fundadora do Instituto Performance desde 2025, a Dra. Ana Helena desenvolve sua prática médica com uma visão que integra ciência, inovação e sensibilidade, reconhecendo a beleza como uma expressão singular de cada paciente.</p>
+          <p>Sua filosofia de trabalho é fundamentada na prevenção, no rejuvenescimento e na longevidade da pele, associando conhecimento científico, tecnologias avançadas e tratamentos individualizados para valorizar a beleza natural, preservar a harmonia e respeitar a essência de cada pessoa.</p>
+          <dl class="credentials">
+            <div class="credential">
+              <dt><b>Formação</b></dt>
+              <dd><span>Medicina e Pós-graduação em Dermatologia Clínica e Estética</span></dd>
+            </div>
+            <div class="credential">
+              <dt><b>Atuação</b></dt>
+              <dd><span>Estética Avançada e Rejuvenescimento · Tricologia</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy" id="filosofia" aria-labelledby="filosofia-title">
+      <div class="wrap">
+        <div class="philosophy-grid">
+          <div>
+            <span class="eyebrow">Uma abordagem individual</span>
+            <h2 class="serif" id="filosofia-title">Valorizar, nunca padronizar.</h2>
+            <blockquote>“Minha abordagem parte de um princípio essencial: a beleza deve ser valorizada, nunca padronizada. Cada tratamento é cuidadosamente planejado para preservar a individualidade, promover o equilíbrio e proporcionar resultados naturais ao longo do tempo.”</blockquote>
+            <p>Uma prática que integra ciência, inovação e sensibilidade, com atenção à prevenção, ao rejuvenescimento e à longevidade da pele.</p>
+          </div>
+          <figure class="philosophy-photo">
+            <img src="assets/dra-ana-15.jpg" alt="Dra. Ana Helena em retrato de perfil" width="900" height="1350" loading="lazy" decoding="async">
+          </figure>
+        </div>
+        <div class="singular-note">
+          <blockquote>Há muita beleza na sua singularidade.</blockquote>
+          <figure>
+            <img src="assets/frase-instituto.jpg" alt="Detalhe do Instituto Performance com a frase sobre singularidade" width="1012" height="1800" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice section-pad" id="atuacao" aria-labelledby="atuacao-title">
+      <div class="wrap">
+        <div class="practice-head">
+          <span class="eyebrow">Ciência, cuidado e tecnologia</span>
+          <h2 class="serif" id="atuacao-title">Atuação</h2>
+          <p>Conhecimento científico e tratamentos individualizados para valorizar a beleza natural e respeitar a essência de cada pessoa.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="num" aria-hidden="true">01</span>
+            <h3>Estética Avançada e Rejuvenescimento</h3>
+            <p>Atuação orientada à prevenção e ao rejuvenescimento, com atenção à harmonia e à beleza natural.</p>
+          </article>
+          <article class="card">
+            <span class="num" aria-hidden="true">02</span>
+            <h3>Tricologia</h3>
+            <p>Cuidado individualizado dedicado à saúde dos cabelos e do couro cabeludo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-section" id="espaco" aria-labelledby="espaco-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Instituto Performance · Salvador, Bahia</span>
+            <h2 class="serif" id="espaco-title">Um ambiente pensado para acolher.</h2>
+          </div>
+          <p>Conheça a recepção e os ambientes do Instituto Performance. As imagens dos espaços ficam separadas dos retratos da Dra. Ana Helena.</p>
+        </div>
+        <div class="space-grid" aria-label="Galeria de ambientes do Instituto Performance">
+          <button class="gallery-item" type="button" data-lightbox-group="espaco" data-caption="Área de espera do Instituto Performance">
+            <img src="assets/recepcao-01.jpg" alt="Área de espera do Instituto Performance" width="1012" height="1800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Área de espera</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="espaco" data-caption="Balcão de recepção do Instituto Performance">
+            <img src="assets/recepcao-02.jpg" alt="Balcão de recepção do Instituto Performance" width="1012" height="1800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Recepção</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="espaco" data-caption="Espaço de atendimento do Instituto Performance">
+            <img src="assets/recepcao-03.jpg" alt="Espaço de atendimento do Instituto Performance" width="1012" height="1800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Espaço de atendimento</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="espaco" data-caption="Detalhes do ambiente do Instituto Performance">
+            <img src="assets/recepcao-04.jpg" alt="Detalhes do ambiente do Instituto Performance" width="1012" height="1800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Detalhes do ambiente</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="espaco" data-caption="Detalhes da recepção do Instituto Performance">
+            <img src="assets/recepcao-05.jpg" alt="Detalhes da recepção do Instituto Performance" width="1012" height="1800" loading="lazy" decoding="async">
+            <span class="gallery-caption">Recepção</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="portrait-gallery" id="galeria" aria-labelledby="galeria-title">
+      <div class="wrap">
+        <div class="gallery-heading">
+          <span class="eyebrow">Retratos profissionais</span>
+          <h2 class="serif" id="galeria-title">Dra. Ana Helena</h2>
+        </div>
+        <div class="gallery-grid" aria-label="Galeria de retratos da Dra. Ana Helena">
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato profissional no Instituto Performance">
+            <img src="assets/dra-ana-01.jpg" alt="Dra. Ana Helena em retrato profissional no Instituto Performance" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato profissional</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato em um ambiente de atendimento">
+            <img src="assets/dra-ana-02.jpg" alt="Dra. Ana Helena em um ambiente de atendimento" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No Instituto</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato profissional da Dra. Ana Helena">
+            <img src="assets/dra-ana-03.jpg" alt="Dra. Ana Helena em retrato profissional" width="1200" height="1600" loading="lazy" decoding="async"><span class="gallery-caption">Retrato profissional</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato no consultório">
+            <img src="assets/dra-ana-04.jpg" alt="Dra. Ana Helena em retrato no consultório" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No consultório</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato em ambiente de atendimento">
+            <img src="assets/dra-ana-05.jpg" alt="Dra. Ana Helena em ambiente de atendimento" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No Instituto</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Dra. Ana Helena em seu ambiente de trabalho">
+            <img src="assets/dra-ana-06.jpg" alt="Dra. Ana Helena em seu ambiente de trabalho" width="1200" height="1800" loading="lazy" decoding="async"><span class="gallery-caption">No ambiente de trabalho</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato profissional">
+            <img src="assets/dra-ana-07.jpg" alt="Dra. Ana Helena em retrato profissional" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato profissional</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato no Instituto Performance">
+            <img src="assets/dra-ana-08.jpg" alt="Dra. Ana Helena em retrato no Instituto Performance" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No Instituto</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato de perfil">
+            <img src="assets/dra-ana-09.jpg" alt="Dra. Ana Helena em retrato de perfil" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato de perfil</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Dra. Ana Helena apresentando um equipamento">
+            <img src="assets/dra-ana-10.jpg" alt="Dra. Ana Helena apresentando um equipamento" width="1200" height="1800" loading="lazy" decoding="async"><span class="gallery-caption">Tecnologia e cuidado</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Dra. Ana Helena em seu ambiente de trabalho">
+            <img src="assets/dra-ana-11.jpg" alt="Dra. Ana Helena em seu ambiente de trabalho" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No ambiente de trabalho</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Dra. Ana Helena em seu ambiente de trabalho">
+            <img src="assets/dra-ana-12.jpg" alt="Dra. Ana Helena em seu ambiente de trabalho" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No ambiente de trabalho</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato profissional">
+            <img src="assets/dra-ana-13.jpg" alt="Dra. Ana Helena em retrato profissional" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato profissional</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato no consultório">
+            <img src="assets/dra-ana-14.jpg" alt="Dra. Ana Helena em retrato no consultório" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">No consultório</span>
+          </button>
+          <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato de perfil no Instituto Performance">
+            <img src="assets/dra-ana-15.jpg" alt="Dra. Ana Helena em retrato de perfil no Instituto Performance" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato de perfil</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="attend" id="atendimento" aria-labelledby="atendimento-title">
+      <div class="wrap attend-row">
+        <div>
+          <span class="eyebrow">Atendimento</span>
+          <h2 class="serif" id="atendimento-title">Seu cuidado começa pela sua singularidade.</h2>
+          <p>Instituto Performance · Salvador — Bahia</p>
+        </div>
+        <a class="btn" href="https://wa.me/5571999632523?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Ana%20Helena." target="_blank" rel="noopener noreferrer">Falar no WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="#inicio" aria-label="Dra. Ana Helena, início">
+          <span class="monogram" aria-hidden="true">AH</span>
+          <span class="brand-name">Dra. Ana Helena<br>Dermatologia Clínica e Estética</span>
+        </a>
+        <p>Médica · CRM-BA 43.424<br>Instituto Performance · Salvador — Bahia</p>
+        <a href="#inicio" class="btn outline">Voltar ao início ↑</a>
+      </div>
+      <p class="legal">© <span id="year">2026</span> Dra. Ana Helena. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-header">
+      <h2 class="lightbox-title" id="lightbox-title">Visualização ampliada</h2>
+      <button class="lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>
+    </div>
+    <div class="lightbox-frame">
+      <button class="lightbox-step" type="button" data-previous aria-label="Imagem anterior">‹</button>
+      <img class="lightbox-image" alt="">
+      <button class="lightbox-step" type="button" data-next aria-label="Próxima imagem">›</button>
+    </div>
+    <p class="lightbox-caption"></p>
+    <p class="lightbox-status" role="status" aria-live="polite"></p>
+    <div class="lightbox-indicators" aria-label="Indicadores das imagens"></div>
+  </dialog>
+</body>
+</html>

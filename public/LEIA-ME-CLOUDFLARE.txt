@@ -1,8 +1,8 @@
 INSTITUTO PERFORMANCE — SITE PARA CLOUDFLARE PAGES
 ====================================================
 
-Este pacote contém a versão final aprovada do site, em um único arquivo:
-index.html (com textos, fotos e estilos embutidos).
+Este pacote contém a versão final do site: index.html, site.css, site.js
+e a pasta assets/ com as fotos. Envie todos juntos, mantendo a estrutura.
 
 COMO PUBLICAR NO CLOUDFLARE PAGES
 ---------------------------------
@@ -17,6 +17,6 @@ e envie o novo ZIP.
 
 OBSERVAÇÕES
 -----------
-- O arquivo index.html funciona sozinho: as fotos estão dentro dele.
+- As fotos ficam na pasta assets/; não renomeie nem separe os arquivos.
 - As fontes são carregadas pelo Google Fonts pela internet (padrão de sites).
 - Nenhum dado sensível, credencial ou chave está incluído neste pacote.
