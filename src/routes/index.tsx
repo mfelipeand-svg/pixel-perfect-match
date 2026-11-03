@@ -7,10 +7,11 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "Instituto Performance | Dermatologia clínica, estética e tricologia em Salvador" },
-      { name: "description", content: "Instituto Performance: dermatologia clínica, dermatologia estética e tricologia no Caminho das Árvores, Salvador." },
-      { property: "og:title", content: "Instituto Performance" },
-      { property: "og:description", content: "Dermatologia clínica, estética e tricologia em Salvador." },
+      { title: "Dra. Ana Helena | Dermatologia Clínica e Estética em Salvador" },
+      { name: "description", content: "Dra. Ana Helena, médica CRM-BA 43.424, pós-graduada em Dermatologia Clínica e Estética. Estética avançada, rejuvenescimento e tricologia em Salvador." },
+      { property: "og:title", content: "Dra. Ana Helena | Dermatologia Clínica e Estética" },
+      { property: "og:description", content: "Uma estética que respeita a individualidade. Ciência, tecnologia e sensibilidade para valorizar a beleza natural." },
+      { property: "og:image", content: "/assets/dra-ana-01.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
