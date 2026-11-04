@@ -118,4 +118,22 @@
     image.removeAttribute("src");
     if (returnFocus?.isConnected) returnFocus.focus();
   });
+
+  // Progressive reveal: content remains visible when motion is reduced or observer is unavailable.
+  const revealTargets = document.querySelectorAll(
+    ".intro-grid, .philosophy-grid, .singular-note, .practice-head, .card, .section-heading, .gallery-item, .attend-row"
+  );
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealTargets.forEach((element) => element.classList.add("reveal"));
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach((element) => revealObserver.observe(element));
+  }
+
 })();
