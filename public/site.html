@@ -48,7 +48,10 @@
         <a class="btn" href="#atendimento">Agende sua consulta <span aria-hidden="true">↗</span></a>
       </div>
       <figure class="hero-photo">
-        <img src="assets/dra-ana-01.jpg" alt="Dra. Ana Helena em retrato profissional" width="900" height="1350" fetchpriority="high" decoding="async">
+        <div class="hero-duo">
+          <img src="assets/dra-ana-01.jpg" alt="Dra. Ana Helena em retrato profissional" width="900" height="1350" fetchpriority="high" decoding="async">
+          <img src="assets/dra-ana-07.jpg" alt="Dra. Ana Helena em outro retrato profissional" width="900" height="1350" decoding="async">
+        </div>
         <figcaption class="hero-sign">
           <strong>Dra. Ana Helena</strong>
           <span>MÉDICA · CRM-BA 43.424</span>
@@ -58,9 +61,7 @@
 
     <section class="intro section-pad" id="sobre" aria-labelledby="sobre-title">
       <div class="wrap intro-grid">
-        <figure class="portrait">
-          <img src="assets/dra-ana-12.jpg" alt="Dra. Ana Helena em seu ambiente de trabalho" width="900" height="1350" loading="lazy" decoding="async">
-        </figure>
+        <figure class="portrait photo-slot" aria-hidden="true"></figure>
         <div class="intro-copy">
           <span class="eyebrow">Sobre a Dra.</span>
           <h2 class="serif" id="sobre-title">Dra. Ana Helena</h2>
@@ -90,15 +91,7 @@
             <blockquote>“Minha abordagem parte de um princípio essencial: a beleza deve ser valorizada, nunca padronizada. Cada tratamento é cuidadosamente planejado para preservar a individualidade, promover o equilíbrio e proporcionar resultados naturais ao longo do tempo.”</blockquote>
             <p>Uma prática que integra ciência, inovação e sensibilidade, com atenção à prevenção, ao rejuvenescimento e à longevidade da pele.</p>
           </div>
-          <figure class="philosophy-photo">
-            <img src="assets/dra-ana-15.jpg" alt="Dra. Ana Helena em retrato de perfil" width="900" height="1350" loading="lazy" decoding="async">
-          </figure>
-        </div>
-        <div class="singular-note">
-          <blockquote>Há muita beleza na sua singularidade.</blockquote>
-          <figure>
-            <img src="assets/frase-instituto.jpg" alt="Detalhe do Instituto Performance com a frase sobre singularidade" width="1012" height="1800" loading="lazy" decoding="async">
-          </figure>
+          <figure class="philosophy-photo photo-slot" aria-hidden="true"></figure>
         </div>
       </div>
     </section>
@@ -121,6 +114,21 @@
             <h3>Tricologia</h3>
             <p>Cuidado individualizado dedicado à saúde dos cabelos e do couro cabeludo.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="compare-section section-pad" id="resultados" aria-labelledby="resultados-title">
+      <div class="wrap">
+        <div class="practice-head">
+          <span class="eyebrow">Antes e depois</span>
+          <h2 class="serif" id="resultados-title">Resultados</h2>
+        </div>
+        <div class="compare" data-compare style="--pos:50%">
+          <div class="compare-pane compare-before"><span class="compare-label">Antes</span></div>
+          <div class="compare-pane compare-after"><span class="compare-label">Depois</span></div>
+          <div class="compare-handle" aria-hidden="true"></div>
+          <input class="compare-range" type="range" min="0" max="100" value="50" step="1" aria-label="Arraste para comparar antes e depois" aria-valuetext="50% antes">
         </div>
       </div>
     </section>
@@ -165,7 +173,10 @@
           <span class="eyebrow">Retratos profissionais</span>
           <h2 class="serif" id="galeria-title">Dra. Ana Helena</h2>
         </div>
-        <div class="gallery-grid" aria-label="Galeria de retratos da Dra. Ana Helena">
+        <div class="carousel" data-carousel>
+          <button class="carousel-step" type="button" data-carousel-prev aria-label="Retratos anteriores">‹</button>
+          <div class="carousel-viewport">
+          <div class="gallery-grid carousel-track" role="list" aria-label="Galeria de retratos da Dra. Ana Helena">
           <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato profissional no Instituto Performance">
             <img src="assets/dra-ana-01.jpg" alt="Dra. Ana Helena em retrato profissional no Instituto Performance" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato profissional</span>
           </button>
@@ -211,6 +222,10 @@
           <button class="gallery-item" type="button" data-lightbox-group="retratos" data-caption="Retrato de perfil no Instituto Performance">
             <img src="assets/dra-ana-15.jpg" alt="Dra. Ana Helena em retrato de perfil no Instituto Performance" width="900" height="1350" loading="lazy" decoding="async"><span class="gallery-caption">Retrato de perfil</span>
           </button>
+        </div>
+          </div>
+          <button class="carousel-step" type="button" data-carousel-next aria-label="Próximos retratos">›</button>
+        </div>
         </div>
       </div>
     </section>
