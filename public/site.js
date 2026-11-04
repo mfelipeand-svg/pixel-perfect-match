@@ -40,6 +40,18 @@
       range.setAttribute("aria-valuetext", `${v}% antes`);
     };
     range.addEventListener("input", () => set(range.value));
+    const fromPointer = (e) => {
+      const r = box.getBoundingClientRect();
+      const v = Math.round(Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100)));
+      range.value = v;
+      set(v);
+    };
+    let dragging = false;
+    box.addEventListener("pointerdown", (e) => { dragging = true; box.setPointerCapture?.(e.pointerId); fromPointer(e); range.focus({ preventScroll: true }); e.preventDefault(); });
+    box.addEventListener("pointermove", (e) => { if (dragging) fromPointer(e); });
+    const stop = () => { dragging = false; };
+    box.addEventListener("pointerup", stop);
+    box.addEventListener("pointercancel", stop);
   });
 
   // Carrossel circular (sem clones)
