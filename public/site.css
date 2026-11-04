@@ -291,7 +291,47 @@ p { max-width: 66ch; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .carousel-track { transition: none !important; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .btn:hover, .gallery-item:hover img, .gallery-item:focus-visible img, .lightbox-indicator[aria-current="true"] { transform: none; }
+}
+
+/* Hero com duas fotos */
+.hero-photo { position: relative; }
+.hero-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; height: 100%; min-height: inherit; }
+.hero-duo img { height: 100%; object-position: 50% 22%; }
+.hero-duo img:nth-child(2) { margin-top: 48px; height: calc(100% - 48px); }
+.hero-sign { position: absolute; left: 18px; bottom: 18px; display: grid; padding: 10px 14px; color: var(--paper); background: rgba(42,33,27,.62); font-size: 11px; letter-spacing: .12em; }
+.hero-sign strong { font: 500 20px/1.2 var(--serif); letter-spacing: 0; }
+
+/* Slots de foto vazios */
+.photo-slot { border: 1px dashed rgba(104,69,46,.35); }
+.philosophy .photo-slot { border-color: rgba(255,250,245,.35); }
+
+/* Antes / Depois */
+.compare { position: relative; width: min(100%, 860px); margin-inline: auto; aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); touch-action: pan-y; user-select: none; }
+.compare-pane { position: absolute; inset: 0; display: flex; align-items: flex-start; padding: 16px; }
+.compare-before { background: #e3d6c7; clip-path: inset(0 calc(100% - var(--pos)) 0 0); z-index: 1; }
+.compare-after { background: #efe5da; justify-content: flex-end; }
+.compare-label { padding: 6px 12px; border-radius: 20px; color: var(--paper); background: rgba(42,33,27,.6); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+.compare-handle { position: absolute; top: 0; bottom: 0; left: var(--pos); z-index: 2; width: 2px; transform: translateX(-1px); background: var(--paper); pointer-events: none; }
+.compare-handle::after { position: absolute; top: 50%; left: 50%; width: 44px; height: 44px; transform: translate(-50%,-50%); border: 2px solid var(--paper); border-radius: 50%; background: var(--brown); content: "‹ ›"; color: var(--paper); display: grid; place-items: center; font-size: 16px; }
+.compare-range { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.compare:has(.compare-range:focus-visible) .compare-handle::after { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+/* Carrossel circular */
+.carousel { display: grid; grid-template-columns: 46px minmax(0,1fr) 46px; gap: 12px; align-items: center; }
+.carousel-viewport { overflow: hidden; }
+.carousel-track.gallery-grid { display: flex; gap: 16px; transition: transform .6s ease; will-change: transform; }
+.carousel-track .gallery-item { flex: 0 0 calc((100% - 48px) / 4); }
+.carousel-step { width: 46px; height: 46px; border: 1px solid var(--brown); border-radius: 50%; color: var(--brown); background: transparent; font-size: 24px; cursor: pointer; }
+.carousel-step:hover { color: var(--paper); background: var(--brown); }
+@media (max-width: 850px) { .carousel-track .gallery-item { flex-basis: calc((100% - 32px) / 3); } }
+@media (max-width: 560px) {
+  .carousel { grid-template-columns: 38px minmax(0,1fr) 38px; gap: 6px; }
+  .carousel-step { width: 38px; height: 38px; }
+  .carousel-track.gallery-grid { gap: 9px; }
+  .carousel-track .gallery-item { flex-basis: calc((100% - 9px) / 2); }
+  .hero-duo img:nth-child(2) { margin-top: 28px; height: calc(100% - 28px); }
 }
