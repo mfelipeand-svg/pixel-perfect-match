@@ -42,13 +42,10 @@
     const previous = carousel.querySelector("[data-previous]");
     const next = carousel.querySelector("[data-next]");
 
-    if (!slides.length || !dots || !status || !toggle || !previous || !next) return;
+    if (!slides.length || !dots || !status || !previous || !next) return;
 
     let activeIndex = 0;
     let timer = 0;
-    let userPaused = false;
-    let hovered = false;
-    let focused = false;
 
     const stop = () => {
       window.clearInterval(timer);
@@ -71,8 +68,8 @@
 
     const start = () => {
       stop();
-      if (reducedMotion.matches || userPaused || document.hidden || hovered || focused) return;
-      timer = window.setInterval(() => show(activeIndex + 1, false), 6000);
+      if (document.hidden) return;
+      timer = window.setInterval(() => show(activeIndex + 1, false), 3000);
     };
 
     slides.forEach((_, index) => {
@@ -96,31 +93,6 @@
       show(activeIndex + 1, true);
       start();
     });
-    toggle.addEventListener("click", () => {
-      userPaused = !userPaused;
-      toggle.setAttribute("aria-pressed", String(userPaused));
-      toggle.setAttribute("aria-label", userPaused ? "Retomar rotação automática" : "Pausar rotação automática");
-      toggle.textContent = userPaused ? "▶" : "Ⅱ";
-      start();
-    });
-    carousel.addEventListener("mouseenter", () => {
-      hovered = true;
-      stop();
-    });
-    carousel.addEventListener("mouseleave", () => {
-      hovered = false;
-      start();
-    });
-    carousel.addEventListener("focusin", () => {
-      focused = true;
-      stop();
-    });
-    carousel.addEventListener("focusout", (event) => {
-      if (!carousel.contains(event.relatedTarget)) {
-        focused = false;
-        start();
-      }
-    });
     carousel.addEventListener("keydown", (event) => {
       if (event.key === "ArrowLeft") {
         event.preventDefault();
@@ -133,7 +105,6 @@
       }
     });
     document.addEventListener("visibilitychange", start);
-    reducedMotion.addEventListener("change", start);
     show(activeIndex, false);
     start();
   });
