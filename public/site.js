@@ -32,6 +32,68 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  // Antes/Depois
+  document.querySelectorAll("[data-compare]").forEach((box) => {
+    const range = box.querySelector(".compare-range");
+    const set = (v) => {
+      box.style.setProperty("--pos", v + "%");
+      range.setAttribute("aria-valuetext", `${v}% antes`);
+    };
+    range.addEventListener("input", () => set(range.value));
+  });
+
+  // Carrossel circular (sem clones)
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  document.querySelectorAll("[data-carousel]").forEach((root) => {
+    const track = root.querySelector(".carousel-track");
+    let busy = false;
+    let timer = null;
+    let paused = false;
+    const stepSize = () => {
+      const first = track.firstElementChild;
+      return first.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || "0");
+    };
+    const next = () => {
+      if (busy) return;
+      if (reduce.matches) { track.append(track.firstElementChild); return; }
+      busy = true;
+      track.style.transform = `translateX(-${stepSize()}px)`;
+      const end = () => {
+        track.style.transition = "none";
+        track.append(track.firstElementChild);
+        track.style.transform = "translateX(0)";
+        void track.offsetWidth;
+        track.style.transition = "";
+        busy = false;
+      };
+      track.addEventListener("transitionend", end, { once: true });
+    };
+    const prev = () => {
+      if (busy) return;
+      if (reduce.matches) { track.prepend(track.lastElementChild); return; }
+      busy = true;
+      track.style.transition = "none";
+      track.prepend(track.lastElementChild);
+      track.style.transform = `translateX(-${stepSize()}px)`;
+      void track.offsetWidth;
+      track.style.transition = "";
+      track.style.transform = "translateX(0)";
+      track.addEventListener("transitionend", () => { busy = false; }, { once: true });
+    };
+    root.querySelector("[data-carousel-next]").addEventListener("click", next);
+    root.querySelector("[data-carousel-prev]").addEventListener("click", prev);
+    const start = () => {
+      clearInterval(timer);
+      if (!reduce.matches) timer = setInterval(() => { if (!paused && !document.hidden) next(); }, 4000);
+    };
+    root.addEventListener("mouseenter", () => { paused = true; });
+    root.addEventListener("mouseleave", () => { paused = false; });
+    root.addEventListener("focusin", () => { paused = true; });
+    root.addEventListener("focusout", () => { paused = false; });
+    reduce.addEventListener?.("change", start);
+    start();
+  });
+
   const dialog = document.querySelector("#lightbox");
   if (!dialog) return;
 
