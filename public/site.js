@@ -69,7 +69,7 @@
     const start = () => {
       stop();
       if (document.hidden) return;
-      timer = window.setInterval(() => show(activeIndex + 1, false), 1000);
+      timer = window.setInterval(() => show(activeIndex + 1, false), 3000);
     };
 
     slides.forEach((_, index) => {
