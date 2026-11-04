@@ -295,3 +295,69 @@ p { max-width: 66ch; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .btn:hover, .gallery-item:hover img, .gallery-item:focus-visible img, .lightbox-indicator[aria-current="true"] { transform: none; }
 }
+
+/* Redesign v2 — identidade editorial, responsiva e refinada */
+:root {
+  --cream: #f5f0e9;
+  --paper: #fffdf9;
+  --sand: #e7ddd1;
+  --brown: #72503d;
+  --dark: #29231f;
+  --gold: #b99a72;
+  --muted: #766a60;
+  --max: 1320px;
+}
+body { background: var(--paper); }
+.site-header { height: 88px; background: rgba(255,253,249,.94); border-color: rgba(114,80,61,.13); }
+.monogram { font-size: 46px; letter-spacing: -.08em; }
+.brand-name { letter-spacing: .13em; }
+.nav a:not(.btn) { transition: color .2s ease; }
+.btn { border-radius: 2px; letter-spacing: .04em; text-transform: uppercase; font-size: 11px; min-height: 52px; padding-inline: 26px; }
+.hero { min-height: min(820px, calc(100svh - 88px)); background: var(--cream); }
+.hero-copy { padding-top: clamp(70px, 9vw, 120px); padding-bottom: clamp(70px, 9vw, 120px); }
+.hero-copy h1 { font-size: clamp(56px, 6.4vw, 94px); max-width: 11ch; }
+.hero-copy > p:not(.eyebrow) { font-size: 15px; line-height: 1.85; }
+.hero-photo { position: relative; min-height: 620px; }
+.hero-photo::after { position:absolute; inset:0; content:""; pointer-events:none; background:linear-gradient(180deg,transparent 60%,rgba(30,23,18,.28)); }
+.hero-sign { position:absolute; z-index:1; right:clamp(20px,4vw,54px); bottom:clamp(20px,4vw,54px); display:grid; gap:5px; color:#fff; text-align:right; }
+.hero-sign strong { font:500 34px/1 var(--serif); }
+.hero-sign span { font-size:10px; letter-spacing:.16em; }
+.section-pad, .space-section, .portrait-gallery { padding-block: clamp(84px, 11vw, 140px); }
+.intro-grid { gap:clamp(40px,8vw,110px); }
+.portrait, .philosophy-photo { border-radius:0; }
+.philosophy { background:#59402f; }
+.practice-head { margin-bottom:60px; }
+.cards { gap:20px; }
+.card { position:relative; min-height:245px; padding:clamp(28px,4vw,46px); background:transparent; border:1px solid #d8c9ba; transition:background .25s ease, transform .25s ease; }
+.card:hover { background:var(--paper); transform:translateY(-4px); }
+.card h3 { max-width:17ch; font-size:clamp(25px,3vw,34px); }
+.space-section { background:#eee5db; }
+.section-heading { margin-bottom:48px; }
+.gallery-item { background:#d8c9ba; }
+.gallery-item img { transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s ease; }
+.gallery-item:hover img, .gallery-item:focus-visible img { transform:scale(1.045); filter:saturate(.92); }
+.gallery-caption { font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+.attend { padding-block:clamp(75px,9vw,120px); background:#e7ddd1; }
+.attend h2 { font-size:clamp(42px,5.5vw,72px); }
+.site-footer { padding-top:65px; }
+.lightbox { border-radius:0; }
+.js .reveal { opacity:0; transform:translateY(22px); transition:opacity .65s ease,transform .65s ease; }
+.js .reveal.is-visible { opacity:1; transform:none; }
+@media(max-width:850px) {
+ .site-header {height:76px}
+ .hero {min-height:unset}
+ .hero-photo {min-height:600px}
+ .hero-copy h1 {max-width:12ch}
+}
+@media(max-width:560px) {
+ .hero-copy h1 {font-size:clamp(48px,13vw,66px)}
+ .hero-photo {min-height:490px}
+ .hero-sign strong {font-size:29px}
+ .section-pad,.space-section,.portrait-gallery {padding-block:76px}
+ .practice-head {margin-bottom:35px}
+ .card {min-height:unset}
+ .foot {gap:24px}
+}
+@media(prefers-reduced-motion:reduce) {
+ .js .reveal {opacity:1;transform:none;transition:none}
+}
