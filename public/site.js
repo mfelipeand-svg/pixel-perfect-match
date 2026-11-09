@@ -263,8 +263,6 @@
 
     addImage(beforeLayer, beforeSource, slider.dataset.beforeAlt, "antes");
     addImage(afterLayer, afterSource, slider.dataset.afterAlt, "depois");
-    range.disabled = false;
-    slider.classList.add("is-ready");
   });
 
   const dialog = document.querySelector("#lightbox");

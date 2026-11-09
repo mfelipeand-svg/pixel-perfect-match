@@ -448,3 +448,9 @@ p { max-width: 66ch; }
 .paired-slider .before-after-layer-after img {
   right: 0;
 }
+
+
+/* Resultado 07 — mantém o comparador no formato correto da imagem original. */
+.tricologia-slider .before-after-viewport {
+  aspect-ratio: 1 / 1;
+}
