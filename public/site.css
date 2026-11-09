@@ -151,7 +151,8 @@ p { max-width: 66ch; }
 .differential-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
 .differential-card { display: flex; min-width: 0; align-items: flex-start; gap: 12px; padding: 15px 13px; border: 1px solid rgba(197,160,89,.25); border-radius: 15px; background: rgba(255,255,255,.62); transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 .differential-card:hover { transform: translateY(-2px); border-color: rgba(197,160,89,.7); box-shadow: 0 9px 24px rgba(74,46,30,.08); }
-.differential-mark { display: grid; width: 36px; min-width: 36px; height: 36px; place-items: center; overflow: hidden; border: 1px solid rgba(197,160,89,.35); border-radius: 11px; background: var(--sand); }\n.differential-mark img { width: 100%; height: 100%; object-fit: contain; }
+.differential-mark { display: grid; width: 36px; min-width: 36px; height: 36px; place-items: center; overflow: hidden; border: 1px solid rgba(197,160,89,.35); border-radius: 11px; background: var(--sand); }
+.differential-mark img { width: 100%; height: 100%; object-fit: contain; }
 .differential-card h2 { margin: 0 0 4px; font: 600 12px/1.3 var(--serif); }
 .differential-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 
