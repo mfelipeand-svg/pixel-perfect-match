@@ -428,3 +428,16 @@ p { max-width: 66ch; }
   .space-grid .gallery-item { animation: none; transform: none; }
   .btn:hover, .gallery-item:hover img, .gallery-item:focus-visible img, .lightbox-indicator[aria-current="true"], .carousel-dot[aria-current="true"] { transform: none; }
 }
+
+/* Comparadores 08 e 09: cada arquivo preserva o par original lado a lado.
+   As duas camadas mostram metades opostas do mesmo arquivo, sem recortar a foto-fonte. */
+.paired-slider .before-after-layer img {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
+}
+.paired-slider .before-after-layer-before img { left: 0; }
+.paired-slider .before-after-layer-after img { right: 0; }
