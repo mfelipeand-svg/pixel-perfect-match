@@ -232,12 +232,23 @@
       return;
     }
 
+    let loadedImages = 0;
+    let failedImage = false;
     const addImage = (layer, source, alt, label) => {
       const image = document.createElement("img");
       image.alt = alt;
       image.loading = "lazy";
       image.decoding = "async";
+      image.addEventListener("load", () => {
+        loadedImages += 1;
+        if (loadedImages === 2 && !failedImage) {
+          range.disabled = false;
+          slider.classList.add("is-ready");
+        }
+      }, { once: true });
       image.addEventListener("error", () => {
+        failedImage = true;
+        slider.classList.remove("is-ready");
         slider.classList.add("is-error");
         range.disabled = true;
         const message = document.createElement("p");
