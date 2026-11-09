@@ -6,8 +6,6 @@
 .fx-ready .fx-reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.65,.2,1),transform .8s cubic-bezier(.2,.65,.2,1);transition-delay:var(--fx-delay,0s)}
 .fx-ready .fx-reveal.fx-in{opacity:1;transform:none}
 
-.practice-photo{transition:transform .45s ease,box-shadow .45s ease}
-@media (hover:hover){.practice-photo:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(47,26,15,.14)}}
 
 .attend .btn[href*="wa.me"]{animation:fx-pulse 3.2s ease-out infinite}
 .attend .btn[href*="wa.me"]:hover,.attend .btn[href*="wa.me"]:focus-visible{animation:none}
@@ -16,6 +14,5 @@
 @media (prefers-reduced-motion:reduce){
   .fx-progress{display:none}
   .fx-ready .fx-reveal{opacity:1;transform:none;transition:none}
-  .practice-photo:hover{transform:none}
   .attend .btn[href*="wa.me"]{animation:none}
 }
