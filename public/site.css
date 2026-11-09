@@ -179,13 +179,6 @@ p { max-width: 66ch; }
 .philosophy-photo { position: relative; width: min(100%, 470px); aspect-ratio: 4 / 5; justify-self: end; overflow: hidden; border: 1px solid rgba(197,160,89,.5); border-radius: 20px; background: rgba(255,255,255,.06); box-shadow: 0 20px 50px rgba(20,12,7,.2); }
 .philosophy-photo img { object-position: center 27%; }
 
-.practice-head { max-width: 750px; margin: 0 auto 50px; text-align: center; }
-.practice-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 3vw, 28px); }
-.practice-photo { min-width: 0; margin: 0; overflow: hidden; border: 1px solid rgba(197,160,89,.35); border-radius: 18px; background: rgba(255,255,255,.76); box-shadow: 0 12px 32px rgba(74,46,30,.08); }
-.practice-photo img { width: 100%; height: auto; object-fit: contain; }
-.practice-caption { padding: 21px clamp(18px, 2.5vw, 27px) 25px; }
-.practice-caption h3 { margin: 0 0 8px; color: var(--brown); font: 500 clamp(23px, 2.3vw, 29px)/1.15 var(--serif); }
-.practice-caption p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .records-section { padding: clamp(72px, 9vw, 110px) 0; border-block: 1px solid rgba(197,160,89,.2); background: var(--sand); }
 .records-heading > p { max-width: 510px; }
 .records-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -403,7 +396,7 @@ p { max-width: 66ch; }
   .differential-grid { grid-template-columns: 1fr; gap: 8px; }
   .differential-card { padding: 12px; }
   .portrait-caption { font-size: 9px; }
-  .credentials, .practice-gallery { grid-template-columns: minmax(0, 1fr); }
+  .credentials { grid-template-columns: minmax(0, 1fr); }
   .portrait-marquee .gallery-item { width: min(68vw, 220px); }
   .gallery-item { aspect-ratio: 3 / 4; }
   .records-grid { grid-template-columns: 1fr; gap: 14px; }
