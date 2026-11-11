@@ -539,3 +539,24 @@ p { max-width: 66ch; }
 .botox-before-after .before-after-range {
   z-index: 4;
 }
+
+
+/* Botox agora usa exatamente o mesmo enquadramento e mecânica dos demais cards paired-slider. */
+.botox-before-after .before-after-viewport {
+  aspect-ratio: 1 / 1;
+}
+.botox-before-after .before-after-layer img {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  max-width: none;
+  height: 100%;
+  object-fit: fill;
+}
+.botox-before-after .before-after-layer-before img {
+  left: 0;
+}
+.botox-before-after .before-after-layer-after img {
+  left: auto;
+  right: 0;
+}
