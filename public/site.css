@@ -485,27 +485,3 @@ p { max-width: 66ch; }
 .result-composite figcaption span { padding: 4px 8px; border-radius: 3px; color: var(--paper); background: rgba(47,26,15,.78); font-size: 10px; font-weight: 600; letter-spacing: .04em; }
 .footer-map-link { display: inline-flex; }
 @media (max-width: 640px) { .footer-map-link { width: 100%; justify-content: center; text-align: center; } }
-
-
-/* Comparador interativo para imagens compostas de antes e depois */
-.botox-before-after .before-after-viewport { aspect-ratio: 2 / 1; }
-.botox-before-after[data-composite-split="true"] .before-after-layer { overflow: hidden; }
-.botox-before-after[data-composite-split="true"] .before-after-layer img {
-  position: absolute;
-  top: 0;
-  width: 200%;
-  max-width: none;
-  height: 100%;
-  object-fit: fill;
-}
-.botox-before-after[data-composite-split="true"] .before-after-layer-before img { left: 0; }
-.botox-before-after[data-composite-split="true"] .before-after-layer-after img { left: -100%; }
-.space-heading { margin-bottom: 28px; }
-.space-heading > div { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-.space-heading .eyebrow { margin: 0; }
-.space-map-link { display: inline-flex; width: fit-content; }
-@media (max-width: 640px) {
-  .space-heading { align-items: flex-start; }
-  .space-heading > div { width: 100%; }
-  .space-map-link { width: 100%; justify-content: center; text-align: center; }
-}
