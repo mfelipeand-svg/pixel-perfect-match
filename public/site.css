@@ -485,3 +485,25 @@ p { max-width: 66ch; }
 .result-composite figcaption span { padding: 4px 8px; border-radius: 3px; color: var(--paper); background: rgba(47,26,15,.78); font-size: 10px; font-weight: 600; letter-spacing: .04em; }
 .footer-map-link { display: inline-flex; }
 @media (max-width: 640px) { .footer-map-link { width: 100%; justify-content: center; text-align: center; } }
+
+
+/* Botox: divisor interativo sobre a foto original, sem recorte ou redimensionamento interno. */
+.botox-before-after .before-after-viewport {
+  aspect-ratio: 2 / 1;
+  height: auto;
+}
+.botox-before-after .before-after-composite {
+  display: block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.botox-before-after .before-after-range {
+  z-index: 4;
+}
+.botox-before-after .before-after-divider {
+  z-index: 3;
+}
