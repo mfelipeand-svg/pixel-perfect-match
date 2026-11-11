@@ -220,26 +220,43 @@
     range.addEventListener("input", updateSplit);
     updateSplit();
 
-    // Botox usa uma única composição original; o controle move somente a divisória.
+    // Botox: a imagem original já contém antes (esquerda) e depois (direita).
+    // Duas cópias idênticas são recortadas em lados opostos pela divisória móvel.
     if (slider.dataset.compositePhoto === "true") {
-      const photo = slider.querySelector(".before-after-composite");
-      if (!photo) return;
+      const source = slider.dataset.compositeSrc;
+      if (!source) return;
 
-      const activateDivider = () => {
-        range.disabled = false;
-        slider.classList.add("is-ready");
-      };
-      const reportPhotoError = () => {
-        range.disabled = true;
-        slider.classList.add("is-error");
+      let loadedImages = 0;
+      let failedImage = false;
+      const addCompositeLayer = (layer, alt, label) => {
+        const image = document.createElement("img");
+        image.alt = alt;
+        image.loading = "lazy";
+        image.decoding = "async";
+        image.addEventListener("load", () => {
+          loadedImages += 1;
+          if (loadedImages === 2 && !failedImage) {
+            range.disabled = false;
+            slider.classList.add("is-ready");
+          }
+        }, { once: true });
+        image.addEventListener("error", () => {
+          failedImage = true;
+          range.disabled = true;
+          slider.classList.remove("is-ready");
+          slider.classList.add("is-error");
+          const message = document.createElement("p");
+          message.className = "before-after-load-error";
+          message.setAttribute("role", "alert");
+          message.textContent = `Não foi possível carregar a imagem original do resultado de ${label}.`;
+          layer.replaceChildren(message);
+        }, { once: true });
+        image.src = source;
+        layer.replaceChildren(image);
       };
 
-      photo.addEventListener("load", activateDivider, { once: true });
-      photo.addEventListener("error", reportPhotoError, { once: true });
-      if (photo.complete) {
-        if (photo.naturalWidth > 0) activateDivider();
-        else reportPhotoError();
-      }
+      addCompositeLayer(beforeLayer, "Imagem original — lado Antes", "antes");
+      addCompositeLayer(afterLayer, "Imagem original — lado Depois", "depois");
       return;
     }
 
