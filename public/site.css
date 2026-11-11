@@ -507,3 +507,35 @@ p { max-width: 66ch; }
 .botox-before-after .before-after-divider {
   z-index: 3;
 }
+
+
+/* Botox: slider de revelação sobre a composição original 2:1, sem alterar pixels ou proporção. */
+.botox-before-after .before-after-viewport {
+  aspect-ratio: 2 / 1;
+}
+.botox-before-after .before-after-layer {
+  inset: 0;
+}
+.botox-before-after .before-after-layer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.botox-before-after .before-after-layer-before {
+  clip-path: inset(0 calc(100% - var(--split)) 0 0);
+}
+.botox-before-after .before-after-layer-after {
+  z-index: 0;
+  clip-path: inset(0 0 0 var(--split));
+}
+.botox-before-after .before-after-layer-before {
+  z-index: 1;
+}
+.botox-before-after .before-after-divider {
+  z-index: 3;
+}
+.botox-before-after .before-after-range {
+  z-index: 4;
+}
