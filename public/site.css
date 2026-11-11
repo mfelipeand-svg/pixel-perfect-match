@@ -470,3 +470,9 @@ p { max-width: 66ch; }
 .tricologia-slider .before-after-viewport {
   aspect-ratio: 1 / 1;
 }
+
+/* Link do Google Maps posicionado junto à apresentação do Instituto. */
+.institute-map-link { display: inline-flex; margin-top: 18px; }
+@media (max-width: 640px) {
+  .institute-map-link { width: 100%; justify-content: center; text-align: center; }
+}
