@@ -220,6 +220,29 @@
     range.addEventListener("input", updateSplit);
     updateSplit();
 
+    // Botox usa uma única composição original; o controle move somente a divisória.
+    if (slider.dataset.compositePhoto === "true") {
+      const photo = slider.querySelector(".before-after-composite");
+      if (!photo) return;
+
+      const activateDivider = () => {
+        range.disabled = false;
+        slider.classList.add("is-ready");
+      };
+      const reportPhotoError = () => {
+        range.disabled = true;
+        slider.classList.add("is-error");
+      };
+
+      photo.addEventListener("load", activateDivider, { once: true });
+      photo.addEventListener("error", reportPhotoError, { once: true });
+      if (photo.complete) {
+        if (photo.naturalWidth > 0) activateDivider();
+        else reportPhotoError();
+      }
+      return;
+    }
+
     const beforeSource = slider.dataset.beforeSrc.trim();
     const afterSource = slider.dataset.afterSrc.trim();
     if (!beforeSource && !afterSource) return;
