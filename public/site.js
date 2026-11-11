@@ -257,6 +257,9 @@
         message.textContent = `Não foi possível carregar a imagem de ${label}. Verifique o caminho do arquivo.`;
         layer.replaceChildren(message);
       }, { once: true });
+      if (slider.dataset.compositeSplit === "true") {
+        image.classList.add("before-after-composite-image");
+      }
       image.src = source;
       layer.replaceChildren(image);
     };
