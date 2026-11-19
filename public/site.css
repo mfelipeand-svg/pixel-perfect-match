@@ -90,6 +90,7 @@ p { max-width: 66ch; }
 .monogram span { font: italic 20px/1 var(--editorial); }
 .monogram img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .brand-name { font-size: 11px; font-weight: 600; letter-spacing: .11em; line-height: 1.45; text-transform: uppercase; }
+.site-header .brand-name { white-space: nowrap; letter-spacing: .04em; }
 .nav { display: flex; align-items: center; gap: clamp(14px, 2.2vw, 28px); }
 .nav a:not(.btn) { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-decoration: none; text-underline-offset: 7px; }
 .nav a:not(.btn):hover { color: var(--gold); text-decoration: underline; }
@@ -415,6 +416,7 @@ p { max-width: 66ch; }
   .space-grid .gallery-item:first-child { grid-column: span 2; aspect-ratio: 4 / 3; }
   .attend-row .btn { width: 100%; }
   .brand-name { font-size: 10px; }
+  .site-header .brand-name { font-size: clamp(8px, 2.5vw, 10px); letter-spacing: .015em; }
   .monogram { width: 42px; min-width: 42px; height: 42px; }
   .lightbox { width: 100%; max-height: 100dvh; padding: 12px 8px; border-right: 0; border-left: 0; }
   .lightbox-frame { grid-template-columns: 40px minmax(0, 1fr) 40px; gap: 6px; }
